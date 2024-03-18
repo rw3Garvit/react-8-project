@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "3195",
+      "name": "garvit",
+      "email": "garvit@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "9416",
+      "name": "Ramoliya dharmi",
+      "email": "dharmi@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "0fc1",
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "a0fb",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "123"
+    }
+  ]
+}
