@@ -23,6 +23,36 @@
       "name": "user",
       "email": "user@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "852b",
+      "name": "garvit",
+      "email": "garvit@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2e5f",
+      "name": "garvit",
+      "email": "garvit@gmail.com",
+      "password": "123"
+    }
+  ],
+  "products": [
+    {
+      "id": "b8c1",
+      "productName": "Mobile",
+      "productImage": "https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a736blghpkd/gallery/pk-galaxy-a73-5g-a736-sm-a736blghpkd-532683352?$ORIGIN_PNG$?$450_450_PNG$",
+      "price": "123",
+      "desc": "this is mobile",
+      "available": true
+    },
+    {
+      "id": "b7c5",
+      "productName": "ring",
+      "productImage": "https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a736blghpkd/gallery/pk-galaxy-a73-5g-a736-sm-a736blghpkd-532683352?$ORIGIN_PNG$?$450_450_PNG$",
+      "price": "12",
+      "desc": "this is ring",
+      "available": true
     }
   ]
 }

@@ -15,7 +15,7 @@ const Users = () => {
 
   useEffect(() => {
     get_user();
-  });
+  }, []);
 
   return (
     <div className="row">
