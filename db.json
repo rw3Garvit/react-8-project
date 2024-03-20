@@ -52,7 +52,7 @@
       "productImage": "https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a736blghpkd/gallery/pk-galaxy-a73-5g-a736-sm-a736blghpkd-532683352?$ORIGIN_PNG$?$450_450_PNG$",
       "price": "12",
       "desc": "this is ring",
-      "available": true
+      "available": false
     }
   ]
 }

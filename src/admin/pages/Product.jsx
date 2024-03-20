@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { base_url, get_product, post_product } from "../../constant";
 import { add_data, get_data } from "../../api/api";
 import Producttable from "../body/Producttable";
+import { Switch } from "@mui/material";
+import axios from "axios";
 
 const Product = () => {
   //all products here
@@ -31,6 +33,24 @@ const Product = () => {
     let res = await get_data(base_url, get_product);
     console.log(res, "get product");
     setproduct(res.data);
+  };
+
+  //switch
+  let handleSwitch = async (id, available, index) => {
+    console.log(available);
+
+    let data = product[index];
+    console.log(data);
+    await axios.put(`http://localhost:3001/products/${data.id}`, {
+      ...data,
+      available,
+    });
+
+    setproduct(
+      product.map((val, ind) => (val.id === id ? { ...data, available } : val))
+    );
+
+    // console.log(res);
   };
 
   useEffect(() => {
@@ -86,9 +106,47 @@ const Product = () => {
         </div>
       </div>
 
-      <div className="col-md-8">
+      {/* <div className="col-md-8">
         <Producttable product={product} />
-      </div>
+      </div> */}
+
+      <table class="table ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">product Image</th>
+            <th scope="col">product Name</th>
+            <th scope="col">price</th>
+            <th scope="col">Description</th>
+            <th scope="col">available</th>
+          </tr>
+        </thead>
+        <tbody>
+          {product?.map((val, ind) => {
+            return (
+              <tr>
+                <td>
+                  <b>{val.id}</b>
+                </td>
+                <td>
+                  <img src={val.productImage} width={70} height={70} />
+                </td>
+                <td>{val.productName}</td>
+                <td>{val.price}</td>
+                <td>{val.desc}</td>
+                <td>
+                  <Switch
+                    checked={val.available}
+                    onChange={(e) =>
+                      handleSwitch(val.id, e.target.checked, ind)
+                    }
+                  />
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
     </div>
   );
 };
